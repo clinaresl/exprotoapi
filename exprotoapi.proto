@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package = "./;exprotoapi";
+
+// Service definition
+service ExampleService {
+  rpc SayHello (HelloRequest) returns (HelloResponse);
+}
+
+// -- Message types
+
+// Client sends:
+message HelloRequest {
+  string name = 1;
+}
+
+// Server returns:
+message HelloResponse {
+  string greeting = 1;
+}
